@@ -1,0 +1,306 @@
+{
+  "timestamp": "2026-10-18T22:34:29.524931",
+  "mode": "smoke_test",
+  "batch_size": 8,
+  "epochs": 1,
+  "steps_per_epoch": 2,
+  "validation_steps": 2,
+  "models": {
+    "custom_cnn": {
+      "smoke_duration_seconds": 4.82,
+      "seconds_per_step": 1.205,
+      "estimated_full_epoch_duration_seconds": 215.5,
+      "estimated_30_epochs_per_fold_minutes": 107.7,
+      "checkpoint_size_mb": 4.95,
+      "prediction_tensor_valid": true,
+      "prediction_tensor_status": "Valid probability distribution.",
+      "metrics": {
+        "accuracy": 0.0,
+        "macro_precision": 0.0,
+        "macro_recall": 0.0,
+        "macro_f1": 0.0,
+        "per_class_recall": {
+          "akiec": 0.0,
+          "bcc": 0.0,
+          "bkl": 0.0,
+          "df": 0.0,
+          "mel": 0.0,
+          "nv": 0.0,
+          "vasc": 0.0
+        },
+        "per_class_f1": {
+          "akiec": 0.0,
+          "bcc": 0.0,
+          "bkl": 0.0,
+          "df": 0.0,
+          "mel": 0.0,
+          "nv": 0.0,
+          "vasc": 0.0
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            11,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "efficientnet_b0": {
+      "smoke_duration_seconds": 12.23,
+      "seconds_per_step": 3.058,
+      "estimated_full_epoch_duration_seconds": 546.7,
+      "estimated_30_epochs_per_fold_minutes": 273.4,
+      "checkpoint_size_mb": 16.4,
+      "prediction_tensor_valid": true,
+      "prediction_tensor_status": "Valid probability distribution.",
+      "metrics": {
+        "accuracy": 0.0625,
+        "macro_precision": 0.2,
+        "macro_recall": 0.0133,
+        "macro_f1": 0.025,
+        "per_class_recall": {
+          "akiec": 0.0,
+          "bcc": 0.0,
+          "bkl": 0.0667,
+          "df": 0.0,
+          "mel": 0.0,
+          "nv": 0.0,
+          "vasc": 0.0
+        },
+        "per_class_f1": {
+          "akiec": 0.0,
+          "bcc": 0.0,
+          "bkl": 0.125,
+          "df": 0.0,
+          "mel": 0.0,
+          "nv": 0.0,
+          "vasc": 0.0
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            1,
+            1,
+            6,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "resnet50": {
+      "smoke_duration_seconds": 11.59,
+      "seconds_per_step": 2.897,
+      "estimated_full_epoch_duration_seconds": 518.1,
+      "estimated_30_epochs_per_fold_minutes": 259.1,
+      "checkpoint_size_mb": 96.65,
+      "prediction_tensor_valid": true,
+      "prediction_tensor_status": "Valid probability distribution.",
+      "metrics": {
+        "accuracy": 0.0,
+        "macro_precision": 0.0,
+        "macro_recall": 0.0,
+        "macro_f1": 0.0,
+        "per_class_recall": {
+          "akiec": 0.0,
+          "bcc": 0.0,
+          "bkl": 0.0,
+          "df": 0.0,
+          "mel": 0.0,
+          "nv": 0.0,
+          "vasc": 0.0
+        },
+        "per_class_f1": {
+          "akiec": 0.0,
+          "bcc": 0.0,
+          "bkl": 0.0,
+          "df": 0.0,
+          "mel": 0.0,
+          "nv": 0.0,
+          "vasc": 0.0
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            13,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    }
+  },
+  "total_smoke_duration_seconds": 28.64,
+  "total_estimated_15_runs_hours": 53.35
+}

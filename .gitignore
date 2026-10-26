@@ -1,0 +1,71 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project Datasets (do not track large raw image archives)
+data/raw/*.zip
+data/raw/*.tar.gz
+data/raw/HAM10000_images_part_1/
+data/raw/HAM10000_images_part_2/
+data/raw/images/
+data/processed/*.h5
+data/processed/*.npz
+
+# Model weights and heavy checkpoint files
+artifacts/checkpoints/*.keras
+artifacts/checkpoints/*.h5
+artifacts/checkpoints/*.weights.h5
+artifacts/meta_models/*.joblib
+artifacts/meta_models/*.pkl
+
+# OS specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Logs
+*.log
+logs/

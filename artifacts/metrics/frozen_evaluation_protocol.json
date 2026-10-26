@@ -1,0 +1,130 @@
+{
+  "protocol_name": "DermaStack-XAI Stage 6 Frozen Holdout Test Evaluation Protocol",
+  "frozen_at": "2026-10-23T20:22:30.000000",
+  "status": "FROZEN_BEFORE_HOLDOUT_TEST_EVALUATION",
+  "dataset": {
+    "name": "HAM10000",
+    "split_manifest": "data/splits/train_val_test_splits.json",
+    "partition_under_test": "test",
+    "expected_sample_count": 1431,
+    "group_column": "lesion_id",
+    "label_column": "dx",
+    "canonical_class_order": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "class_to_idx": {
+      "akiec": 0,
+      "bcc": 1,
+      "bkl": 2,
+      "df": 3,
+      "mel": 4,
+      "nv": 5,
+      "vasc": 6
+    }
+  },
+  "evaluated_models": [
+    {
+      "model_id": "custom_cnn",
+      "display_name": "Custom Lightweight CNN (5-Fold Ensemble)",
+      "type": "deep_learning_base_ensemble",
+      "checkpoint_files": [
+        "artifacts/checkpoints/custom_cnn_fold_0_best.keras",
+        "artifacts/checkpoints/custom_cnn_fold_1_best.keras",
+        "artifacts/checkpoints/custom_cnn_fold_2_best.keras",
+        "artifacts/checkpoints/custom_cnn_fold_3_best.keras",
+        "artifacts/checkpoints/custom_cnn_fold_4_best.keras"
+      ],
+      "ensemble_method": "arithmetic_mean_probabilities",
+      "preprocessing": "rescaling_div_255",
+      "feature_column_slice": [0, 7]
+    },
+    {
+      "model_id": "efficientnet_b0",
+      "display_name": "EfficientNetB0 (5-Fold Ensemble)",
+      "type": "deep_learning_base_ensemble",
+      "checkpoint_files": [
+        "artifacts/checkpoints/efficientnet_b0_fold_0_best.keras",
+        "artifacts/checkpoints/efficientnet_b0_fold_1_best.keras",
+        "artifacts/checkpoints/efficientnet_b0_fold_2_best.keras",
+        "artifacts/checkpoints/efficientnet_b0_fold_3_best.keras",
+        "artifacts/checkpoints/efficientnet_b0_fold_4_best.keras"
+      ],
+      "ensemble_method": "arithmetic_mean_probabilities",
+      "preprocessing": "raw_float_rgb_pass_through",
+      "feature_column_slice": [7, 14]
+    },
+    {
+      "model_id": "resnet50",
+      "display_name": "ResNet50 (5-Fold Ensemble)",
+      "type": "deep_learning_base_ensemble",
+      "checkpoint_files": [
+        "artifacts/checkpoints/resnet50_fold_0_best.keras",
+        "artifacts/checkpoints/resnet50_fold_1_best.keras",
+        "artifacts/checkpoints/resnet50_fold_2_best.keras",
+        "artifacts/checkpoints/resnet50_fold_3_best.keras",
+        "artifacts/checkpoints/resnet50_fold_4_best.keras"
+      ],
+      "ensemble_method": "arithmetic_mean_probabilities",
+      "preprocessing": "bgr_imagenet_mean_centered",
+      "feature_column_slice": [14, 21]
+    },
+    {
+      "model_id": "stacking_standard",
+      "display_name": "Standard Stacking Meta-Classifier (Logistic Regression, class_weight=None)",
+      "type": "stacking_meta_learner",
+      "artifact_path": "artifacts/meta_models/stacking_meta_model.joblib",
+      "manifest_path": "artifacts/meta_models/stacking_meta_manifest.json",
+      "hyperparameters": {
+        "C": 1.0,
+        "penalty": "l2",
+        "solver": "lbfgs",
+        "max_iter": 1000,
+        "class_weight": null,
+        "random_state": 42
+      },
+      "input_dimension": 21,
+      "feature_ordering": "custom_cnn(0..6) + efficientnet_b0(7..13) + resnet50(14..20)",
+      "selection_rationale": "Primary maximum-likelihood research baseline optimizing overall accuracy and probability calibration without post-hoc class re-weighting."
+    },
+    {
+      "model_id": "stacking_balanced",
+      "display_name": "Balanced Stacking Meta-Classifier (Logistic Regression, class_weight='balanced')",
+      "type": "stacking_meta_learner",
+      "artifact_path": "artifacts/meta_models/stacking_meta_model_balanced.joblib",
+      "manifest_path": "artifacts/meta_models/stacking_meta_manifest_balanced.json",
+      "hyperparameters": {
+        "C": 1.0,
+        "penalty": "l2",
+        "solver": "lbfgs",
+        "max_iter": 1000,
+        "class_weight": "balanced",
+        "random_state": 42
+      },
+      "input_dimension": 21,
+      "feature_ordering": "custom_cnn(0..6) + efficientnet_b0(7..13) + resnet50(14..20)",
+      "selection_rationale": "High-sensitivity clinical screening baseline neutralizing empirical prior log-odds to maximize recall on minority and malignant lesions (mel, df, vasc, akiec)."
+    }
+  ],
+  "metrics_specification": {
+    "accuracy": "Fraction of correct classifications (argmax class == true class).",
+    "macro_precision": "Unweighted mean of per-class precision across all 7 classes, zero_division=0.",
+    "macro_recall": "Unweighted mean of per-class recall across all 7 classes, zero_division=0.",
+    "macro_f1": "Unweighted mean of per-class harmonic F1-score across all 7 classes, zero_division=0.",
+    "weighted_f1": "Support-weighted mean of per-class F1-score.",
+    "roc_auc_ovr_macro": "Multiclass One-vs-Rest Area Under the ROC Curve, macro-averaged across all 7 binary classification tasks using predicted probabilities.",
+    "multiclass_log_loss": "Negative log-likelihood of true class probabilities, clipped to [1e-15, 1 - 1e-15].",
+    "multiclass_brier_score": "Mean squared difference between predicted class probabilities and one-hot true indicator vectors: (1/N) * sum_i sum_c (p_{i,c} - y_{i,c})^2."
+  },
+  "governance_and_integrity_rules": [
+    "Rule 1: Zero Holdout Leakage — The holdout test set was not accessed during training, fold validation, OOF generation, meta-learner fitting, or protocol specification.",
+    "Rule 2: Frozen Decision Boundaries — Predictions must use the standard argmax decision rule; no post-hoc threshold tuning or recalibration is permitted on test data.",
+    "Rule 3: Separate Reporting — Validation and holdout test metrics must be reported separately; mixing, pooling, or averaging test and validation metrics is strictly prohibited.",
+    "Rule 4: Dual-Model Transparency — Both Standard Stacking and Balanced Stacking must be evaluated and reported side-by-side to expose the clinical precision-vs-recall trade-off."
+  ]
+}

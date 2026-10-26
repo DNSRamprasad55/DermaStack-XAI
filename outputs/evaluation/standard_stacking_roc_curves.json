@@ -1,0 +1,22 @@
+{
+  "model_name": "Standard Stacking",
+  "classes": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "roc_auc_per_class": {
+    "akiec": 0.9469,
+    "bcc": 0.947,
+    "bkl": 0.8804,
+    "df": 0.9138,
+    "mel": 0.8435,
+    "nv": 0.9031,
+    "vasc": 0.9943
+  },
+  "macro_auc": 0.9188
+}

@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-10-19T08:22:47.806545",
+  "is_complete_oof": false,
+  "warning": "PARTIAL FOLD 0 PILOT ONLY - NOT COMPLETE OOF MATRIX",
+  "partial_fold_index": 0,
+  "evaluated_samples": 1431,
+  "total_training_samples": 7153,
+  "coverage_percentage": 20.01,
+  "matrix_shape": [
+    1431,
+    21
+  ],
+  "classes": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "class_to_idx": {
+    "akiec": 0,
+    "bcc": 1,
+    "bkl": 2,
+    "df": 3,
+    "mel": 4,
+    "nv": 5,
+    "vasc": 6
+  },
+  "model_column_slices": {
+    "custom_cnn": [
+      0,
+      7
+    ],
+    "efficientnet_b0": [
+      7,
+      14
+    ],
+    "resnet50": [
+      14,
+      21
+    ]
+  },
+  "artifacts": {
+    "partial_oof_predictions": "K:\\DERMASTACK-XAI\\artifacts\\oof\\pilot_fold_0_partial_oof.npy",
+    "partial_oof_labels": "K:\\DERMASTACK-XAI\\artifacts\\oof\\pilot_fold_0_labels.npy",
+    "partial_oof_image_ids": "K:\\DERMASTACK-XAI\\artifacts\\oof\\pilot_fold_0_image_ids.json"
+  }
+}

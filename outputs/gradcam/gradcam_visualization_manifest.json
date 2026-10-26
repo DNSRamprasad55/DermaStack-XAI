@@ -1,0 +1,335 @@
+{
+  "generated_at": "2026-10-23T20:17:31.347543",
+  "fold_evaluated": 0,
+  "target_layers_used": {
+    "custom_cnn": "conv4_block",
+    "efficientnet_b0": "top_conv",
+    "resnet50": "conv5_block3_out"
+  },
+  "ensemble_attribution_notice": "ENSEMBLE INTERPRETABILITY NOTICE: Grad-CAM generates visual feature activation heatmaps specifically for convolutional feature extractors (Custom CNN, EfficientNetB0, ResNet50). The Stage 4 Stacking Ensemble (Multinomial Logistic Regression) operates on a 21-dimensional feature space of predicted probability distributions rather than spatial image pixels. Consequently, base-model heatmaps explain individual neural network feature focus, while the ensemble decision is an optimal weighted combination of these base model predictions.",
+  "total_images_visualized": 7,
+  "visualizations": [
+    {
+      "image_id": "ISIC_0026575",
+      "true_diagnosis": "akiec",
+      "true_class_index": 0,
+      "explanations": {
+        "custom_cnn": {
+          "checkpoint": "custom_cnn_fold_0_best.keras",
+          "target_layer": "conv4_block",
+          "predicted_class": "akiec",
+          "predicted_probability": 0.5793,
+          "true_class_probability": 0.5793,
+          "is_prediction_correct": true,
+          "heatmap_shape": [
+            28,
+            28
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0026575_custom_cnn_akiec_overlay.png"
+        },
+        "efficientnet_b0": {
+          "checkpoint": "efficientnet_b0_fold_0_best.keras",
+          "target_layer": "top_conv",
+          "predicted_class": "mel",
+          "predicted_probability": 0.3973,
+          "true_class_probability": 0.0633,
+          "is_prediction_correct": false,
+          "heatmap_shape": [
+            7,
+            7
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0026575_efficientnet_b0_akiec_overlay.png"
+        },
+        "resnet50": {
+          "checkpoint": "resnet50_fold_0_best.keras",
+          "target_layer": "conv5_block3_out",
+          "predicted_class": "bcc",
+          "predicted_probability": 0.4745,
+          "true_class_probability": 0.4135,
+          "is_prediction_correct": false,
+          "heatmap_shape": [
+            7,
+            7
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0026575_resnet50_akiec_overlay.png"
+        }
+      }
+    },
+    {
+      "image_id": "ISIC_0029230",
+      "true_diagnosis": "bcc",
+      "true_class_index": 1,
+      "explanations": {
+        "custom_cnn": {
+          "checkpoint": "custom_cnn_fold_0_best.keras",
+          "target_layer": "conv4_block",
+          "predicted_class": "df",
+          "predicted_probability": 0.2919,
+          "true_class_probability": 0.1911,
+          "is_prediction_correct": false,
+          "heatmap_shape": [
+            28,
+            28
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0029230_custom_cnn_bcc_overlay.png"
+        },
+        "efficientnet_b0": {
+          "checkpoint": "efficientnet_b0_fold_0_best.keras",
+          "target_layer": "top_conv",
+          "predicted_class": "bcc",
+          "predicted_probability": 0.3283,
+          "true_class_probability": 0.3283,
+          "is_prediction_correct": true,
+          "heatmap_shape": [
+            7,
+            7
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0029230_efficientnet_b0_bcc_overlay.png"
+        },
+        "resnet50": {
+          "checkpoint": "resnet50_fold_0_best.keras",
+          "target_layer": "conv5_block3_out",
+          "predicted_class": "bcc",
+          "predicted_probability": 0.4349,
+          "true_class_probability": 0.4349,
+          "is_prediction_correct": true,
+          "heatmap_shape": [
+            7,
+            7
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0029230_resnet50_bcc_overlay.png"
+        }
+      }
+    },
+    {
+      "image_id": "ISIC_0029176",
+      "true_diagnosis": "bkl",
+      "true_class_index": 2,
+      "explanations": {
+        "custom_cnn": {
+          "checkpoint": "custom_cnn_fold_0_best.keras",
+          "target_layer": "conv4_block",
+          "predicted_class": "bcc",
+          "predicted_probability": 0.4165,
+          "true_class_probability": 0.0355,
+          "is_prediction_correct": false,
+          "heatmap_shape": [
+            28,
+            28
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0029176_custom_cnn_bkl_overlay.png"
+        },
+        "efficientnet_b0": {
+          "checkpoint": "efficientnet_b0_fold_0_best.keras",
+          "target_layer": "top_conv",
+          "predicted_class": "mel",
+          "predicted_probability": 0.3654,
+          "true_class_probability": 0.046,
+          "is_prediction_correct": false,
+          "heatmap_shape": [
+            7,
+            7
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0029176_efficientnet_b0_bkl_overlay.png"
+        },
+        "resnet50": {
+          "checkpoint": "resnet50_fold_0_best.keras",
+          "target_layer": "conv5_block3_out",
+          "predicted_class": "bcc",
+          "predicted_probability": 0.5677,
+          "true_class_probability": 0.0677,
+          "is_prediction_correct": false,
+          "heatmap_shape": [
+            7,
+            7
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0029176_resnet50_bkl_overlay.png"
+        }
+      }
+    },
+    {
+      "image_id": "ISIC_0030021",
+      "true_diagnosis": "df",
+      "true_class_index": 3,
+      "explanations": {
+        "custom_cnn": {
+          "checkpoint": "custom_cnn_fold_0_best.keras",
+          "target_layer": "conv4_block",
+          "predicted_class": "akiec",
+          "predicted_probability": 0.3011,
+          "true_class_probability": 0.1019,
+          "is_prediction_correct": false,
+          "heatmap_shape": [
+            28,
+            28
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0030021_custom_cnn_df_overlay.png"
+        },
+        "efficientnet_b0": {
+          "checkpoint": "efficientnet_b0_fold_0_best.keras",
+          "target_layer": "top_conv",
+          "predicted_class": "bcc",
+          "predicted_probability": 0.2909,
+          "true_class_probability": 0.0873,
+          "is_prediction_correct": false,
+          "heatmap_shape": [
+            7,
+            7
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0030021_efficientnet_b0_df_overlay.png"
+        },
+        "resnet50": {
+          "checkpoint": "resnet50_fold_0_best.keras",
+          "target_layer": "conv5_block3_out",
+          "predicted_class": "df",
+          "predicted_probability": 0.7783,
+          "true_class_probability": 0.7783,
+          "is_prediction_correct": true,
+          "heatmap_shape": [
+            7,
+            7
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0030021_resnet50_df_overlay.png"
+        }
+      }
+    },
+    {
+      "image_id": "ISIC_0026993",
+      "true_diagnosis": "mel",
+      "true_class_index": 4,
+      "explanations": {
+        "custom_cnn": {
+          "checkpoint": "custom_cnn_fold_0_best.keras",
+          "target_layer": "conv4_block",
+          "predicted_class": "mel",
+          "predicted_probability": 0.404,
+          "true_class_probability": 0.404,
+          "is_prediction_correct": true,
+          "heatmap_shape": [
+            28,
+            28
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0026993_custom_cnn_mel_overlay.png"
+        },
+        "efficientnet_b0": {
+          "checkpoint": "efficientnet_b0_fold_0_best.keras",
+          "target_layer": "top_conv",
+          "predicted_class": "nv",
+          "predicted_probability": 0.3148,
+          "true_class_probability": 0.1831,
+          "is_prediction_correct": false,
+          "heatmap_shape": [
+            7,
+            7
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0026993_efficientnet_b0_mel_overlay.png"
+        },
+        "resnet50": {
+          "checkpoint": "resnet50_fold_0_best.keras",
+          "target_layer": "conv5_block3_out",
+          "predicted_class": "mel",
+          "predicted_probability": 0.9779,
+          "true_class_probability": 0.9779,
+          "is_prediction_correct": true,
+          "heatmap_shape": [
+            7,
+            7
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0026993_resnet50_mel_overlay.png"
+        }
+      }
+    },
+    {
+      "image_id": "ISIC_0028502",
+      "true_diagnosis": "nv",
+      "true_class_index": 5,
+      "explanations": {
+        "custom_cnn": {
+          "checkpoint": "custom_cnn_fold_0_best.keras",
+          "target_layer": "conv4_block",
+          "predicted_class": "nv",
+          "predicted_probability": 0.8362,
+          "true_class_probability": 0.8362,
+          "is_prediction_correct": true,
+          "heatmap_shape": [
+            28,
+            28
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0028502_custom_cnn_nv_overlay.png"
+        },
+        "efficientnet_b0": {
+          "checkpoint": "efficientnet_b0_fold_0_best.keras",
+          "target_layer": "top_conv",
+          "predicted_class": "df",
+          "predicted_probability": 0.4036,
+          "true_class_probability": 0.255,
+          "is_prediction_correct": false,
+          "heatmap_shape": [
+            7,
+            7
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0028502_efficientnet_b0_nv_overlay.png"
+        },
+        "resnet50": {
+          "checkpoint": "resnet50_fold_0_best.keras",
+          "target_layer": "conv5_block3_out",
+          "predicted_class": "nv",
+          "predicted_probability": 0.8899,
+          "true_class_probability": 0.8899,
+          "is_prediction_correct": true,
+          "heatmap_shape": [
+            7,
+            7
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0028502_resnet50_nv_overlay.png"
+        }
+      }
+    },
+    {
+      "image_id": "ISIC_0029404",
+      "true_diagnosis": "vasc",
+      "true_class_index": 6,
+      "explanations": {
+        "custom_cnn": {
+          "checkpoint": "custom_cnn_fold_0_best.keras",
+          "target_layer": "conv4_block",
+          "predicted_class": "df",
+          "predicted_probability": 0.7881,
+          "true_class_probability": 0.0337,
+          "is_prediction_correct": false,
+          "heatmap_shape": [
+            28,
+            28
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0029404_custom_cnn_vasc_overlay.png"
+        },
+        "efficientnet_b0": {
+          "checkpoint": "efficientnet_b0_fold_0_best.keras",
+          "target_layer": "top_conv",
+          "predicted_class": "vasc",
+          "predicted_probability": 0.3543,
+          "true_class_probability": 0.3543,
+          "is_prediction_correct": true,
+          "heatmap_shape": [
+            7,
+            7
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0029404_efficientnet_b0_vasc_overlay.png"
+        },
+        "resnet50": {
+          "checkpoint": "resnet50_fold_0_best.keras",
+          "target_layer": "conv5_block3_out",
+          "predicted_class": "vasc",
+          "predicted_probability": 0.9169,
+          "true_class_probability": 0.9169,
+          "is_prediction_correct": true,
+          "heatmap_shape": [
+            7,
+            7
+          ],
+          "saved_overlay": "K:\\DERMASTACK-XAI\\outputs\\gradcam\\ISIC_0029404_resnet50_vasc_overlay.png"
+        }
+      }
+    }
+  ]
+}

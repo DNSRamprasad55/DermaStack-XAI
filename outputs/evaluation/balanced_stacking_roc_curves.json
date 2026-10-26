@@ -1,0 +1,22 @@
+{
+  "model_name": "Balanced Stacking",
+  "classes": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "roc_auc_per_class": {
+    "akiec": 0.9449,
+    "bcc": 0.952,
+    "bkl": 0.8434,
+    "df": 0.8517,
+    "mel": 0.8117,
+    "nv": 0.9027,
+    "vasc": 0.9901
+  },
+  "macro_auc": 0.8999
+}

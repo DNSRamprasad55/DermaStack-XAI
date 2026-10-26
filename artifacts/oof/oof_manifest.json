@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-10-19T22:27:22.535841",
+  "is_complete_oof": true,
+  "warning": null,
+  "evaluated_samples": 7153,
+  "total_training_samples": 7153,
+  "coverage_percentage": 100.0,
+  "matrix_shape": [
+    7153,
+    21
+  ],
+  "sample_count": 7153,
+  "classes": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "class_to_idx": {
+    "akiec": 0,
+    "bcc": 1,
+    "bkl": 2,
+    "df": 3,
+    "mel": 4,
+    "nv": 5,
+    "vasc": 6
+  },
+  "model_column_slices": {
+    "custom_cnn": [
+      0,
+      7
+    ],
+    "efficientnet_b0": [
+      7,
+      14
+    ],
+    "resnet50": [
+      14,
+      21
+    ]
+  },
+  "random_seed": 42,
+  "leakage_safety": {
+    "training_samples_only": true,
+    "external_validation_excluded": true,
+    "holdout_test_excluded": true,
+    "group_isolation_verified": true
+  },
+  "artifacts": {
+    "oof_predictions": "K:\\DERMASTACK-XAI\\artifacts\\oof\\oof_predictions.npy",
+    "oof_labels": "K:\\DERMASTACK-XAI\\artifacts\\oof\\oof_labels.npy",
+    "oof_image_ids": "K:\\DERMASTACK-XAI\\artifacts\\oof\\oof_image_ids.json"
+  }
+}

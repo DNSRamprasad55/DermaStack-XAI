@@ -1,0 +1,25 @@
+# DermaStack-XAI Requirements
+# Verified compatible with Python 3.12 (64-bit) on Windows 11
+
+# Core Deep Learning & Machine Learning
+tensorflow==2.21.0
+keras==3.15.1
+scikit-learn==1.9.1
+joblib==1.6.0
+
+# Numerical Computing & Data Processing
+numpy==2.5.3
+pandas==3.0.6
+
+# Image Processing & Visualization
+pillow==12.3.0
+matplotlib==3.11.2
+seaborn==0.13.2
+
+# Web Application & UI
+streamlit==1.64.0
+
+# Utilities & Testing
+tqdm==4.70.1
+# pytest is optional (built-in unittest is supported without external dependencies)
+# pytest>=8.0.0

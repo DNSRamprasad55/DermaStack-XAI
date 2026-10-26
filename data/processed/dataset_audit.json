@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-10-18T21:45:48.594238",
+  "dataset_found": true,
+  "metadata_path": "K:\\DERMASTACK-XAI\\data\\raw\\HAM10000_metadata.csv",
+  "total_metadata_rows": 10015,
+  "valid_records_count": 10015,
+  "total_images_discovered": 10015,
+  "missing_images_count": 0,
+  "missing_images": [],
+  "orphan_images_count": 0,
+  "orphan_images_sample": [],
+  "corrupted_images_count": 0,
+  "corrupted_images": [],
+  "duplicate_image_ids_count": 0,
+  "duplicate_image_ids": [],
+  "duplicate_metadata_rows_count": 0,
+  "invalid_labels_count": 0,
+  "invalid_labels": [],
+  "patient_identifier_present": false,
+  "patient_identifier_col": null,
+  "patient_audit_notes": "No explicit patient identifier column (['patient_id', 'patient', 'subject_id']) found in metadata. In the official HAM10000 dataset, 'lesion_id' serves as the biological lesion group identifier. Patient-level separation cannot be claimed without explicit patient IDs.",
+  "group_identifier_col": "lesion_id",
+  "unique_lesions_count": 7470,
+  "duplicate_lesion_views_count": 2545,
+  "duplicate_lesion_ratio_pct": 25.41,
+  "class_distribution_counts": {
+    "nv": 6705,
+    "mel": 1113,
+    "bkl": 1099,
+    "bcc": 514,
+    "akiec": 327,
+    "vasc": 142,
+    "df": 115
+  },
+  "class_distribution_percentages": {
+    "nv": 66.95,
+    "mel": 11.11,
+    "bkl": 10.97,
+    "bcc": 5.13,
+    "akiec": 3.27,
+    "vasc": 1.42,
+    "df": 1.15
+  },
+  "image_formats": {
+    "JPEG": 10015
+  },
+  "image_resolutions": {
+    "600x450": 10015
+  },
+  "warnings": [],
+  "errors": []
+}

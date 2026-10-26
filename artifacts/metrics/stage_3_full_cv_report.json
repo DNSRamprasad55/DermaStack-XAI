@@ -1,0 +1,1566 @@
+{
+  "timestamp": "2026-10-19T08:45:56.354122",
+  "mode": "full_5_fold_cross_validation",
+  "epochs_target": 5,
+  "batch_size": 32,
+  "total_folds": 5,
+  "models": [
+    "custom_cnn",
+    "efficientnet_b0",
+    "resnet50"
+  ],
+  "runs_completed": 15,
+  "runs_reused_from_checkpoint": 3,
+  "runs_trained_new": 12,
+  "fold_details": {
+    "custom_cnn": [
+      {
+        "model_name": "custom_cnn",
+        "fold_idx": 0,
+        "train_duration_seconds": 5948.13,
+        "epochs_run": 5,
+        "checkpoint_path": "K:\\DERMASTACK-XAI\\artifacts\\checkpoints\\custom_cnn_fold_0_best.keras",
+        "checkpoint_size_mb": 4.95,
+        "metrics": {
+          "accuracy": 0.3452,
+          "macro_precision": 0.297,
+          "macro_recall": 0.3624,
+          "macro_f1": 0.2621,
+          "per_class_recall": {
+            "akiec": 0.6383,
+            "bcc": 0.4384,
+            "bkl": 0.2994,
+            "df": 0.125,
+            "mel": 0.4277,
+            "nv": 0.3225,
+            "vasc": 0.2857
+          },
+          "per_class_f1": {
+            "akiec": 0.2727,
+            "bcc": 0.2883,
+            "bkl": 0.3042,
+            "df": 0.0115,
+            "mel": 0.3831,
+            "nv": 0.4847,
+            "vasc": 0.0902
+          },
+          "confusion_matrix": [
+            [
+              30,
+              6,
+              2,
+              9,
+              0,
+              0,
+              0
+            ],
+            [
+              28,
+              32,
+              0,
+              10,
+              1,
+              0,
+              2
+            ],
+            [
+              35,
+              18,
+              47,
+              32,
+              12,
+              5,
+              8
+            ],
+            [
+              10,
+              4,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              18,
+              6,
+              31,
+              27,
+              68,
+              3,
+              6
+            ],
+            [
+              50,
+              80,
+              72,
+              242,
+              115,
+              309,
+              90
+            ],
+            [
+              2,
+              3,
+              0,
+              10,
+              0,
+              0,
+              6
+            ]
+          ]
+        }
+      },
+      {
+        "model_name": "custom_cnn",
+        "fold_idx": 1,
+        "train_duration_seconds": 1424.13,
+        "epochs_run": 5,
+        "checkpoint_path": "K:\\DERMASTACK-XAI\\artifacts\\checkpoints\\custom_cnn_fold_1_best.keras",
+        "checkpoint_size_mb": 4.95,
+        "metrics": {
+          "accuracy": 0.035,
+          "macro_precision": 0.0914,
+          "macro_recall": 0.1473,
+          "macro_f1": 0.0126,
+          "per_class_recall": {
+            "akiec": 0.0,
+            "bcc": 0.0,
+            "bkl": 0.0,
+            "df": 0.0,
+            "mel": 0.0,
+            "nv": 0.0313,
+            "vasc": 1.0
+          },
+          "per_class_f1": {
+            "akiec": 0.0,
+            "bcc": 0.0,
+            "bkl": 0.0,
+            "df": 0.0,
+            "mel": 0.0,
+            "nv": 0.0596,
+            "vasc": 0.0286
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              46
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              3,
+              71
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              11,
+              146
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              16
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              155
+            ],
+            [
+              0,
+              0,
+              0,
+              3,
+              0,
+              30,
+              925
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              20
+            ]
+          ]
+        }
+      },
+      {
+        "model_name": "custom_cnn",
+        "fold_idx": 2,
+        "train_duration_seconds": 1927.72,
+        "epochs_run": 5,
+        "checkpoint_path": "K:\\DERMASTACK-XAI\\artifacts\\checkpoints\\custom_cnn_fold_2_best.keras",
+        "checkpoint_size_mb": 4.95,
+        "metrics": {
+          "accuracy": 0.0147,
+          "macro_precision": 0.0021,
+          "macro_recall": 0.1429,
+          "macro_f1": 0.0042,
+          "per_class_recall": {
+            "akiec": 0.0,
+            "bcc": 0.0,
+            "bkl": 0.0,
+            "df": 0.0,
+            "mel": 0.0,
+            "nv": 0.0,
+            "vasc": 1.0
+          },
+          "per_class_f1": {
+            "akiec": 0.0,
+            "bcc": 0.0,
+            "bkl": 0.0,
+            "df": 0.0,
+            "mel": 0.0,
+            "nv": 0.0,
+            "vasc": 0.0293
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              47
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              73
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              157
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              16
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              159
+            ],
+            [
+              20,
+              0,
+              0,
+              0,
+              0,
+              0,
+              938
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              21
+            ]
+          ]
+        }
+      },
+      {
+        "model_name": "custom_cnn",
+        "fold_idx": 3,
+        "train_duration_seconds": 3466.77,
+        "epochs_run": 5,
+        "checkpoint_path": "K:\\DERMASTACK-XAI\\artifacts\\checkpoints\\custom_cnn_fold_3_best.keras",
+        "checkpoint_size_mb": 4.95,
+        "metrics": {
+          "accuracy": 0.0161,
+          "macro_precision": 0.0326,
+          "macro_recall": 0.1433,
+          "macro_f1": 0.0049,
+          "per_class_recall": {
+            "akiec": 0.0,
+            "bcc": 0.0,
+            "bkl": 0.0,
+            "df": 0.0,
+            "mel": 0.0,
+            "nv": 0.0031,
+            "vasc": 1.0
+          },
+          "per_class_f1": {
+            "akiec": 0.0,
+            "bcc": 0.0,
+            "bkl": 0.0,
+            "df": 0.0,
+            "mel": 0.0,
+            "nv": 0.0062,
+            "vasc": 0.0279
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              46
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              69
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              6,
+              151
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              17
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              159
+            ],
+            [
+              2,
+              0,
+              0,
+              0,
+              0,
+              3,
+              953
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              20
+            ]
+          ]
+        }
+      },
+      {
+        "model_name": "custom_cnn",
+        "fold_idx": 4,
+        "train_duration_seconds": 1445.27,
+        "epochs_run": 5,
+        "checkpoint_path": "K:\\DERMASTACK-XAI\\artifacts\\checkpoints\\custom_cnn_fold_4_best.keras",
+        "checkpoint_size_mb": 4.95,
+        "metrics": {
+          "accuracy": 0.2587,
+          "macro_precision": 0.2818,
+          "macro_recall": 0.378,
+          "macro_f1": 0.222,
+          "per_class_recall": {
+            "akiec": 0.6596,
+            "bcc": 0.0685,
+            "bkl": 0.1783,
+            "df": 0.2353,
+            "mel": 0.6038,
+            "nv": 0.2006,
+            "vasc": 0.7
+          },
+          "per_class_f1": {
+            "akiec": 0.2375,
+            "bcc": 0.0714,
+            "bkl": 0.2456,
+            "df": 0.018,
+            "mel": 0.3699,
+            "nv": 0.3285,
+            "vasc": 0.2828
+          },
+          "confusion_matrix": [
+            [
+              31,
+              3,
+              0,
+              8,
+              5,
+              0,
+              0
+            ],
+            [
+              36,
+              5,
+              3,
+              19,
+              2,
+              0,
+              8
+            ],
+            [
+              50,
+              9,
+              28,
+              24,
+              36,
+              6,
+              4
+            ],
+            [
+              6,
+              1,
+              2,
+              4,
+              2,
+              0,
+              2
+            ],
+            [
+              22,
+              7,
+              6,
+              9,
+              96,
+              14,
+              5
+            ],
+            [
+              68,
+              40,
+              32,
+              362,
+              217,
+              192,
+              46
+            ],
+            [
+              1,
+              2,
+              0,
+              1,
+              2,
+              0,
+              14
+            ]
+          ]
+        }
+      }
+    ],
+    "efficientnet_b0": [
+      {
+        "model_name": "efficientnet_b0",
+        "fold_idx": 0,
+        "train_duration_seconds": 140.04,
+        "epochs_run": 5,
+        "checkpoint_path": "K:\\DERMASTACK-XAI\\artifacts\\checkpoints\\efficientnet_b0_fold_0_best.keras",
+        "checkpoint_size_mb": 16.4,
+        "metrics": {
+          "accuracy": 0.2551,
+          "macro_precision": 0.2025,
+          "macro_recall": 0.2419,
+          "macro_f1": 0.1591,
+          "per_class_recall": {
+            "akiec": 0.1064,
+            "bcc": 0.411,
+            "bkl": 0.1465,
+            "df": 0.25,
+            "mel": 0.2201,
+            "nv": 0.2735,
+            "vasc": 0.2857
+          },
+          "per_class_f1": {
+            "akiec": 0.069,
+            "bcc": 0.1724,
+            "bkl": 0.162,
+            "df": 0.0273,
+            "mel": 0.1746,
+            "nv": 0.4152,
+            "vasc": 0.093
+          },
+          "confusion_matrix": [
+            [
+              5,
+              23,
+              1,
+              9,
+              4,
+              2,
+              3
+            ],
+            [
+              4,
+              30,
+              5,
+              7,
+              7,
+              11,
+              9
+            ],
+            [
+              5,
+              46,
+              23,
+              30,
+              26,
+              14,
+              13
+            ],
+            [
+              1,
+              8,
+              0,
+              4,
+              3,
+              0,
+              0
+            ],
+            [
+              5,
+              49,
+              25,
+              21,
+              35,
+              14,
+              10
+            ],
+            [
+              78,
+              117,
+              69,
+              202,
+              163,
+              262,
+              67
+            ],
+            [
+              0,
+              2,
+              4,
+              4,
+              4,
+              1,
+              6
+            ]
+          ]
+        }
+      },
+      {
+        "model_name": "efficientnet_b0",
+        "fold_idx": 1,
+        "train_duration_seconds": 911.94,
+        "epochs_run": 5,
+        "checkpoint_path": "K:\\DERMASTACK-XAI\\artifacts\\checkpoints\\efficientnet_b0_fold_1_best.keras",
+        "checkpoint_size_mb": 16.4,
+        "metrics": {
+          "accuracy": 0.4042,
+          "macro_precision": 0.2838,
+          "macro_recall": 0.3956,
+          "macro_f1": 0.2594,
+          "per_class_recall": {
+            "akiec": 0.3478,
+            "bcc": 0.2432,
+            "bkl": 0.3185,
+            "df": 0.3125,
+            "mel": 0.4214,
+            "nv": 0.4259,
+            "vasc": 0.7
+          },
+          "per_class_f1": {
+            "akiec": 0.1475,
+            "bcc": 0.2707,
+            "bkl": 0.2874,
+            "df": 0.0862,
+            "mel": 0.3175,
+            "nv": 0.5896,
+            "vasc": 0.1167
+          },
+          "confusion_matrix": [
+            [
+              16,
+              8,
+              10,
+              8,
+              4,
+              0,
+              0
+            ],
+            [
+              20,
+              18,
+              12,
+              5,
+              10,
+              1,
+              8
+            ],
+            [
+              29,
+              5,
+              50,
+              13,
+              28,
+              5,
+              27
+            ],
+            [
+              3,
+              1,
+              1,
+              5,
+              2,
+              2,
+              2
+            ],
+            [
+              16,
+              6,
+              33,
+              8,
+              67,
+              6,
+              23
+            ],
+            [
+              87,
+              21,
+              84,
+              61,
+              151,
+              408,
+              146
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              1,
+              4,
+              14
+            ]
+          ]
+        }
+      },
+      {
+        "model_name": "efficientnet_b0",
+        "fold_idx": 2,
+        "train_duration_seconds": 963.81,
+        "epochs_run": 5,
+        "checkpoint_path": "K:\\DERMASTACK-XAI\\artifacts\\checkpoints\\efficientnet_b0_fold_2_best.keras",
+        "checkpoint_size_mb": 16.4,
+        "metrics": {
+          "accuracy": 0.3711,
+          "macro_precision": 0.2745,
+          "macro_recall": 0.4343,
+          "macro_f1": 0.2543,
+          "per_class_recall": {
+            "akiec": 0.5745,
+            "bcc": 0.274,
+            "bkl": 0.2675,
+            "df": 0.5,
+            "mel": 0.327,
+            "nv": 0.3831,
+            "vasc": 0.7143
+          },
+          "per_class_f1": {
+            "akiec": 0.2222,
+            "bcc": 0.2685,
+            "bkl": 0.2515,
+            "df": 0.0884,
+            "mel": 0.2587,
+            "nv": 0.5441,
+            "vasc": 0.1471
+          },
+          "confusion_matrix": [
+            [
+              27,
+              0,
+              5,
+              12,
+              3,
+              0,
+              0
+            ],
+            [
+              24,
+              20,
+              5,
+              8,
+              7,
+              1,
+              8
+            ],
+            [
+              37,
+              9,
+              42,
+              22,
+              28,
+              4,
+              15
+            ],
+            [
+              3,
+              1,
+              1,
+              8,
+              0,
+              2,
+              1
+            ],
+            [
+              25,
+              8,
+              31,
+              17,
+              52,
+              16,
+              10
+            ],
+            [
+              78,
+              37,
+              93,
+              97,
+              152,
+              367,
+              134
+            ],
+            [
+              2,
+              1,
+              0,
+              1,
+              1,
+              1,
+              15
+            ]
+          ]
+        }
+      },
+      {
+        "model_name": "efficientnet_b0",
+        "fold_idx": 3,
+        "train_duration_seconds": 4361.03,
+        "epochs_run": 5,
+        "checkpoint_path": "K:\\DERMASTACK-XAI\\artifacts\\checkpoints\\efficientnet_b0_fold_3_best.keras",
+        "checkpoint_size_mb": 16.4,
+        "metrics": {
+          "accuracy": 0.4822,
+          "macro_precision": 0.2905,
+          "macro_recall": 0.4294,
+          "macro_f1": 0.2996,
+          "per_class_recall": {
+            "akiec": 0.4894,
+            "bcc": 0.2329,
+            "bkl": 0.4076,
+            "df": 0.1176,
+            "mel": 0.3208,
+            "nv": 0.5376,
+            "vasc": 0.9
+          },
+          "per_class_f1": {
+            "akiec": 0.2556,
+            "bcc": 0.1762,
+            "bkl": 0.3488,
+            "df": 0.0258,
+            "mel": 0.31,
+            "nv": 0.6781,
+            "vasc": 0.3025
+          },
+          "confusion_matrix": [
+            [
+              23,
+              4,
+              8,
+              7,
+              4,
+              1,
+              0
+            ],
+            [
+              27,
+              17,
+              6,
+              16,
+              4,
+              0,
+              3
+            ],
+            [
+              15,
+              20,
+              64,
+              19,
+              17,
+              16,
+              6
+            ],
+            [
+              4,
+              2,
+              2,
+              2,
+              0,
+              7,
+              0
+            ],
+            [
+              14,
+              20,
+              29,
+              17,
+              51,
+              20,
+              8
+            ],
+            [
+              50,
+              57,
+              101,
+              77,
+              94,
+              515,
+              64
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2,
+              18
+            ]
+          ]
+        }
+      },
+      {
+        "model_name": "efficientnet_b0",
+        "fold_idx": 4,
+        "train_duration_seconds": 809.93,
+        "epochs_run": 5,
+        "checkpoint_path": "K:\\DERMASTACK-XAI\\artifacts\\checkpoints\\efficientnet_b0_fold_4_best.keras",
+        "checkpoint_size_mb": 16.4,
+        "metrics": {
+          "accuracy": 0.3776,
+          "macro_precision": 0.2744,
+          "macro_recall": 0.3817,
+          "macro_f1": 0.2438,
+          "per_class_recall": {
+            "akiec": 0.6383,
+            "bcc": 0.1781,
+            "bkl": 0.1911,
+            "df": 0.0,
+            "mel": 0.4717,
+            "nv": 0.3929,
+            "vasc": 0.8
+          },
+          "per_class_f1": {
+            "akiec": 0.2643,
+            "bcc": 0.1844,
+            "bkl": 0.223,
+            "df": 0.0,
+            "mel": 0.3521,
+            "nv": 0.555,
+            "vasc": 0.128
+          },
+          "confusion_matrix": [
+            [
+              30,
+              4,
+              0,
+              7,
+              4,
+              0,
+              2
+            ],
+            [
+              19,
+              13,
+              4,
+              17,
+              8,
+              2,
+              10
+            ],
+            [
+              35,
+              9,
+              30,
+              12,
+              41,
+              5,
+              25
+            ],
+            [
+              3,
+              4,
+              1,
+              0,
+              3,
+              2,
+              4
+            ],
+            [
+              18,
+              6,
+              18,
+              16,
+              75,
+              10,
+              16
+            ],
+            [
+              75,
+              32,
+              59,
+              122,
+              136,
+              376,
+              157
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              3,
+              16
+            ]
+          ]
+        }
+      }
+    ],
+    "resnet50": [
+      {
+        "model_name": "resnet50",
+        "fold_idx": 0,
+        "train_duration_seconds": 320.83,
+        "epochs_run": 5,
+        "checkpoint_path": "K:\\DERMASTACK-XAI\\artifacts\\checkpoints\\resnet50_fold_0_best.keras",
+        "checkpoint_size_mb": 96.65,
+        "metrics": {
+          "accuracy": 0.5038,
+          "macro_precision": 0.3797,
+          "macro_recall": 0.5745,
+          "macro_f1": 0.3995,
+          "per_class_recall": {
+            "akiec": 0.5957,
+            "bcc": 0.6301,
+            "bkl": 0.535,
+            "df": 0.5,
+            "mel": 0.5786,
+            "nv": 0.4676,
+            "vasc": 0.7143
+          },
+          "per_class_f1": {
+            "akiec": 0.3373,
+            "bcc": 0.4767,
+            "bkl": 0.4898,
+            "df": 0.0744,
+            "mel": 0.4116,
+            "nv": 0.6319,
+            "vasc": 0.375
+          },
+          "confusion_matrix": [
+            [
+              28,
+              9,
+              4,
+              5,
+              1,
+              0,
+              0
+            ],
+            [
+              11,
+              46,
+              1,
+              10,
+              3,
+              0,
+              2
+            ],
+            [
+              20,
+              12,
+              84,
+              18,
+              18,
+              5,
+              0
+            ],
+            [
+              3,
+              3,
+              0,
+              8,
+              2,
+              0,
+              0
+            ],
+            [
+              15,
+              10,
+              22,
+              13,
+              92,
+              5,
+              2
+            ],
+            [
+              41,
+              38,
+              75,
+              144,
+              172,
+              448,
+              40
+            ],
+            [
+              1,
+              2,
+              0,
+              1,
+              0,
+              2,
+              15
+            ]
+          ]
+        }
+      },
+      {
+        "model_name": "resnet50",
+        "fold_idx": 1,
+        "train_duration_seconds": 24142.16,
+        "epochs_run": 5,
+        "checkpoint_path": "K:\\DERMASTACK-XAI\\artifacts\\checkpoints\\resnet50_fold_1_best.keras",
+        "checkpoint_size_mb": 96.65,
+        "metrics": {
+          "accuracy": 0.3874,
+          "macro_precision": 0.3065,
+          "macro_recall": 0.4248,
+          "macro_f1": 0.2923,
+          "per_class_recall": {
+            "akiec": 0.3913,
+            "bcc": 0.3108,
+            "bkl": 0.3822,
+            "df": 0.4375,
+            "mel": 0.478,
+            "nv": 0.3737,
+            "vasc": 0.6
+          },
+          "per_class_f1": {
+            "akiec": 0.3,
+            "bcc": 0.2408,
+            "bkl": 0.3243,
+            "df": 0.0452,
+            "mel": 0.337,
+            "nv": 0.5404,
+            "vasc": 0.2581
+          },
+          "confusion_matrix": [
+            [
+              18,
+              11,
+              5,
+              3,
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              23,
+              10,
+              6,
+              14,
+              0,
+              3
+            ],
+            [
+              19,
+              19,
+              60,
+              18,
+              30,
+              3,
+              8
+            ],
+            [
+              1,
+              2,
+              1,
+              7,
+              3,
+              2,
+              0
+            ],
+            [
+              6,
+              15,
+              39,
+              12,
+              76,
+              4,
+              7
+            ],
+            [
+              12,
+              46,
+              98,
+              245,
+              156,
+              358,
+              43
+            ],
+            [
+              0,
+              1,
+              0,
+              3,
+              4,
+              0,
+              12
+            ]
+          ]
+        }
+      },
+      {
+        "model_name": "resnet50",
+        "fold_idx": 2,
+        "train_duration_seconds": 4043.23,
+        "epochs_run": 5,
+        "checkpoint_path": "K:\\DERMASTACK-XAI\\artifacts\\checkpoints\\resnet50_fold_2_best.keras",
+        "checkpoint_size_mb": 96.65,
+        "metrics": {
+          "accuracy": 0.4997,
+          "macro_precision": 0.3045,
+          "macro_recall": 0.4309,
+          "macro_f1": 0.3037,
+          "per_class_recall": {
+            "akiec": 0.8298,
+            "bcc": 0.1644,
+            "bkl": 0.2357,
+            "df": 0.25,
+            "mel": 0.5597,
+            "nv": 0.548,
+            "vasc": 0.4286
+          },
+          "per_class_f1": {
+            "akiec": 0.2826,
+            "bcc": 0.1875,
+            "bkl": 0.2587,
+            "df": 0.086,
+            "mel": 0.3525,
+            "nv": 0.6977,
+            "vasc": 0.2609
+          },
+          "confusion_matrix": [
+            [
+              39,
+              0,
+              2,
+              2,
+              4,
+              0,
+              0
+            ],
+            [
+              38,
+              12,
+              5,
+              9,
+              9,
+              0,
+              0
+            ],
+            [
+              44,
+              11,
+              37,
+              16,
+              44,
+              5,
+              0
+            ],
+            [
+              5,
+              0,
+              0,
+              4,
+              1,
+              4,
+              2
+            ],
+            [
+              23,
+              0,
+              22,
+              6,
+              89,
+              9,
+              10
+            ],
+            [
+              79,
+              31,
+              63,
+              37,
+              196,
+              525,
+              27
+            ],
+            [
+              1,
+              1,
+              0,
+              3,
+              3,
+              4,
+              9
+            ]
+          ]
+        }
+      },
+      {
+        "model_name": "resnet50",
+        "fold_idx": 3,
+        "train_duration_seconds": 3043.16,
+        "epochs_run": 5,
+        "checkpoint_path": "K:\\DERMASTACK-XAI\\artifacts\\checkpoints\\resnet50_fold_3_best.keras",
+        "checkpoint_size_mb": 96.65,
+        "metrics": {
+          "accuracy": 0.4885,
+          "macro_precision": 0.3228,
+          "macro_recall": 0.5137,
+          "macro_f1": 0.3339,
+          "per_class_recall": {
+            "akiec": 0.766,
+            "bcc": 0.1644,
+            "bkl": 0.5096,
+            "df": 0.3529,
+            "mel": 0.5157,
+            "nv": 0.4875,
+            "vasc": 0.8
+          },
+          "per_class_f1": {
+            "akiec": 0.2581,
+            "bcc": 0.1778,
+            "bkl": 0.4071,
+            "df": 0.1176,
+            "mel": 0.3895,
+            "nv": 0.65,
+            "vasc": 0.3368
+          },
+          "confusion_matrix": [
+            [
+              36,
+              1,
+              3,
+              2,
+              4,
+              1,
+              0
+            ],
+            [
+              41,
+              12,
+              3,
+              4,
+              8,
+              1,
+              4
+            ],
+            [
+              38,
+              4,
+              80,
+              5,
+              28,
+              1,
+              1
+            ],
+            [
+              3,
+              0,
+              3,
+              6,
+              2,
+              2,
+              1
+            ],
+            [
+              32,
+              3,
+              27,
+              6,
+              82,
+              6,
+              3
+            ],
+            [
+              81,
+              42,
+              119,
+              62,
+              137,
+              467,
+              50
+            ],
+            [
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              16
+            ]
+          ]
+        }
+      },
+      {
+        "model_name": "resnet50",
+        "fold_idx": 4,
+        "train_duration_seconds": 1813.97,
+        "epochs_run": 5,
+        "checkpoint_path": "K:\\DERMASTACK-XAI\\artifacts\\checkpoints\\resnet50_fold_4_best.keras",
+        "checkpoint_size_mb": 96.65,
+        "metrics": {
+          "accuracy": 0.5252,
+          "macro_precision": 0.3694,
+          "macro_recall": 0.5749,
+          "macro_f1": 0.3882,
+          "per_class_recall": {
+            "akiec": 0.4894,
+            "bcc": 0.3836,
+            "bkl": 0.4968,
+            "df": 0.5882,
+            "mel": 0.6541,
+            "nv": 0.512,
+            "vasc": 0.9
+          },
+          "per_class_f1": {
+            "akiec": 0.3538,
+            "bcc": 0.3567,
+            "bkl": 0.4483,
+            "df": 0.1136,
+            "mel": 0.4315,
+            "nv": 0.6703,
+            "vasc": 0.3429
+          },
+          "confusion_matrix": [
+            [
+              23,
+              6,
+              7,
+              5,
+              6,
+              0,
+              0
+            ],
+            [
+              16,
+              28,
+              3,
+              13,
+              6,
+              0,
+              7
+            ],
+            [
+              11,
+              15,
+              78,
+              13,
+              29,
+              4,
+              7
+            ],
+            [
+              0,
+              0,
+              4,
+              10,
+              3,
+              0,
+              0
+            ],
+            [
+              13,
+              7,
+              15,
+              6,
+              104,
+              10,
+              4
+            ],
+            [
+              20,
+              28,
+              83,
+              112,
+              175,
+              490,
+              49
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              18
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "aggregate_metrics": {
+    "custom_cnn": {
+      "accuracy_mean": 0.1339,
+      "accuracy_std": 0.1401,
+      "macro_precision_mean": 0.141,
+      "macro_precision_std": 0.1246,
+      "macro_recall_mean": 0.2348,
+      "macro_recall_std": 0.1107,
+      "macro_f1_mean": 0.1012,
+      "macro_f1_std": 0.1158,
+      "per_class_recall_mean": {
+        "akiec": 0.2596,
+        "bcc": 0.1014,
+        "bkl": 0.0955,
+        "df": 0.0721,
+        "mel": 0.2063,
+        "nv": 0.1115,
+        "vasc": 0.7971
+      },
+      "per_class_f1_mean": {
+        "akiec": 0.102,
+        "bcc": 0.0719,
+        "bkl": 0.11,
+        "df": 0.0059,
+        "mel": 0.1506,
+        "nv": 0.1758,
+        "vasc": 0.0918
+      }
+    },
+    "efficientnet_b0": {
+      "accuracy_mean": 0.378,
+      "accuracy_std": 0.0731,
+      "macro_precision_mean": 0.2651,
+      "macro_precision_std": 0.0319,
+      "macro_recall_mean": 0.3766,
+      "macro_recall_std": 0.0702,
+      "macro_f1_mean": 0.2432,
+      "macro_f1_std": 0.0461,
+      "per_class_recall_mean": {
+        "akiec": 0.4313,
+        "bcc": 0.2678,
+        "bkl": 0.2662,
+        "df": 0.236,
+        "mel": 0.3522,
+        "nv": 0.4026,
+        "vasc": 0.68
+      },
+      "per_class_f1_mean": {
+        "akiec": 0.1917,
+        "bcc": 0.2144,
+        "bkl": 0.2545,
+        "df": 0.0455,
+        "mel": 0.2826,
+        "nv": 0.5564,
+        "vasc": 0.1575
+      }
+    },
+    "resnet50": {
+      "accuracy_mean": 0.4809,
+      "accuracy_std": 0.0483,
+      "macro_precision_mean": 0.3366,
+      "macro_precision_std": 0.0318,
+      "macro_recall_mean": 0.5038,
+      "macro_recall_std": 0.0659,
+      "macro_f1_mean": 0.3435,
+      "macro_f1_std": 0.0434,
+      "per_class_recall_mean": {
+        "akiec": 0.6144,
+        "bcc": 0.3307,
+        "bkl": 0.4319,
+        "df": 0.4257,
+        "mel": 0.5572,
+        "nv": 0.4778,
+        "vasc": 0.6886
+      },
+      "per_class_f1_mean": {
+        "akiec": 0.3064,
+        "bcc": 0.2879,
+        "bkl": 0.3856,
+        "df": 0.0874,
+        "mel": 0.3844,
+        "nv": 0.6381,
+        "vasc": 0.3147
+      }
+    }
+  },
+  "total_cv_duration_seconds": 49286.18,
+  "total_cv_duration_hours": 13.69
+}

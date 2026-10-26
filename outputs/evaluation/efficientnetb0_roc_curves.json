@@ -1,0 +1,22 @@
+{
+  "model_name": "EfficientNetB0",
+  "classes": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "roc_auc_per_class": {
+    "akiec": 0.8563,
+    "bcc": 0.8633,
+    "bkl": 0.7278,
+    "df": 0.7098,
+    "mel": 0.7494,
+    "nv": 0.856,
+    "vasc": 0.9719
+  },
+  "macro_auc": 0.8198
+}

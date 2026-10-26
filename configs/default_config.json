@@ -1,0 +1,59 @@
+{
+  "system": {
+    "random_seed": 42,
+    "target_device": "CPU"
+  },
+  "dataset": {
+    "raw_dir": "data/raw",
+    "processed_dir": "data/processed",
+    "splits_dir": "data/splits",
+    "metadata_filename": "HAM10000_metadata.csv",
+    "image_subdirs": ["HAM10000_images_part_1", "HAM10000_images_part_2"],
+    "image_size": [224, 224],
+    "batch_size": 32,
+    "test_ratio": 0.15,
+    "val_ratio": 0.15,
+    "group_column": "lesion_id",
+    "classes": ["akiec", "bcc", "bkl", "df", "mel", "nv", "vasc"]
+  },
+  "models": {
+    "custom_cnn": {
+      "input_shape": [224, 224, 3],
+      "dropout_rate": 0.4,
+      "num_classes": 7
+    },
+    "efficientnet_b0": {
+      "input_shape": [224, 224, 3],
+      "weights": "imagenet",
+      "dropout_rate": 0.4,
+      "num_classes": 7
+    },
+    "resnet50": {
+      "input_shape": [224, 224, 3],
+      "weights": "imagenet",
+      "dropout_rate": 0.5,
+      "num_classes": 7
+    },
+    "stacking_meta": {
+      "classifier": "LogisticRegression",
+      "penalty": "l2",
+      "C": 1.0,
+      "solver": "lbfgs",
+      "max_iter": 1000
+    }
+  },
+  "training": {
+    "epochs": 30,
+    "learning_rate": 0.0001,
+    "early_stopping_patience": 7,
+    "reduce_lr_patience": 3,
+    "k_folds": 5
+  },
+  "xai": {
+    "custom_cnn_layer": "conv4_block",
+    "efficientnet_layer": "top_conv",
+    "resnet_layer": "conv5_block3_out",
+    "colormap": "jet",
+    "alpha": 0.4
+  }
+}

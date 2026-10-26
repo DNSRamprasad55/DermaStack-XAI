@@ -1,0 +1,22 @@
+{
+  "model_name": "Custom CNN",
+  "classes": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "roc_auc_per_class": {
+    "akiec": 0.8958,
+    "bcc": 0.8926,
+    "bkl": 0.7784,
+    "df": 0.6136,
+    "mel": 0.8032,
+    "nv": 0.8163,
+    "vasc": 0.8408
+  },
+  "macro_auc": 0.8064
+}

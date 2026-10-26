@@ -1,0 +1,22 @@
+{
+  "model_name": "ResNet50",
+  "classes": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "roc_auc_per_class": {
+    "akiec": 0.92,
+    "bcc": 0.9368,
+    "bkl": 0.7995,
+    "df": 0.7378,
+    "mel": 0.8294,
+    "nv": 0.8974,
+    "vasc": 0.9892
+  },
+  "macro_auc": 0.8733
+}

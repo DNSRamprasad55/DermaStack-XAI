@@ -1,0 +1,23 @@
+{
+  "epochs_completed": 2,
+  "history": [
+    {
+      "epoch": 1,
+      "elapsed_seconds": 3.1,
+      "learning_rate": 9.999999747378752e-05,
+      "accuracy": 0.1875,
+      "loss": 2.915102243423462,
+      "val_accuracy": 0.0,
+      "val_loss": 1.955423355102539
+    },
+    {
+      "epoch": 2,
+      "elapsed_seconds": 0.83,
+      "learning_rate": 9.999999747378752e-05,
+      "accuracy": 0.25,
+      "loss": 2.666480541229248,
+      "val_accuracy": 0.0,
+      "val_loss": 1.9487000703811646
+    }
+  ]
+}
